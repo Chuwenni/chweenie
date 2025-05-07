@@ -1,110 +1,221 @@
-html{
-  background: rgb(202, 23, 202);
+html {
+  background: linear-gradient(to bottom right, #3f51b5, #9c27b0); /* Blue-purple gradient */
   overflow: auto;
+  scroll-behavior: smooth;
 }
-body{
+
+body {
   margin: 0;
-  font-family: Arial,sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
 }
-header{
-  background: rgb(202, 23, 202);
+
+header {
+  background: linear-gradient(to right, #3f51b5, #7b1fa2); /* Blue to violet */
+  padding-bottom: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
-header h1{
-  color:white;
-  text-shadow: 2px 2px 5px;
+
+header h1 {
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+  font-size: 2.5em;
+  text-align: center;
+  padding: 20px 10px;
+  animation: pulseTitle 2s infinite;
 }
-main{
-  background-color: hsl(301, 94%, 31%);
+
+@keyframes pulseTitle {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+  100% { transform: scale(1); }
 }
-.navbar{
-  background-color: #333;
+
+main {
+  background-color: rgba(63, 81, 181, 0.2); /* translucent blue */
+  min-height: 80vh;
+  padding: 2rem;
+  border-radius: 0 0 20px 20px;
 }
-.nav-list{
+
+.navbar {
+  background-color: #1a237e; /* Dark blue */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.nav-list {
   list-style-type: none;
   margin: 0;
-  padding: 5px;
+  padding: 10px;
   display: flex;
+  align-items: center;
 }
-.nav-list li{
+
+.nav-list li {
   margin-left: 20px;
 }
+
 .nav-list a {
   color: white;
   text-decoration: none;
   font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
 }
-.nav-list a:hover{
+
+.nav-list a:hover {
+  background-color: #3949ab;
   text-decoration: underline;
 }
-#logoutbtn{
+
+#logoutbtn {
   margin-left: auto;
   border: 2px solid white;
-  background-color: black;
+  background-color: #0d47a1;
   color: white;
-  border-radius: 5px;
+  border-radius: 10px;
+  padding: 8px 16px;
   transition: 0.3s ease;
+  font-weight: bold;
 }
-#logoutbtn:hover{
-  border: 2px solid black;
+
+#logoutbtn:hover {
+  border: 2px solid #0d47a1;
   background-color: white;
-  color: black;
+  color: #0d47a1;
 }
-#title{
+
+#title {
   margin-left: 10px;
 }
-.vid{
-  margin: 5px;
-}
-main h1{
-  font-size: 2em;
+
+main h1 {
+  font-size: 2.5em;
   color: white;
   text-align: center;
-  text-shadow: 2px 2px 5px;
+  text-shadow: 2px 2px 5px #1a237e;
+  margin-bottom: 2rem;
 }
-.pictures div{
+
+.pictures div, .vid div {
   margin-left: 150px;
   display: inline-block;
   margin-bottom: 50px;
   border: solid white;
   padding: 150px;
-  background: linear-gradient(to right top,
-   purple, rgb(187, 7, 142));
-   box-shadow: 0 0 30px rgb(245, 48, 245);
-   
+  background: linear-gradient(to right top, #3f51b5, #7b1fa2);
+  box-shadow: 0 0 30px #9575cd;
+  border-radius: 20px;
+  transition: transform 0.3s ease;
 }
-.pictures > div h2, h4{
+
+.pictures div:hover, .vid div:hover {
+  transform: scale(1.03);
+}
+
+.pictures > div h2, .pictures > div h4, .vid > div h2 {
   color: white;
-  text-shadow: 2px 2px 30px;
+  text-shadow: 2px 2px 30px #0d47a1;
   font-weight: bold;
   text-align: center;
 }
-.pictures > div .image{
+
+.pictures > div .image, .vid > div .video {
   border: solid white;
-  box-shadow: 0 0 30px rgb(235, 44, 235);
+  box-shadow: 0 0 30px #7986cb;
+  border-radius: 10px;
 }
-.vid div{
-  margin-left: 150px;
+
+/* Cute floating hearts */
+body::after {
+  content: "💙 💫 💜 ✨ 💕";
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  font-size: 2rem;
+  animation: floatHearts 5s infinite alternate ease-in-out;
+}
+
+@keyframes floatHearts {
+  0% { transform: translateY(0); opacity: 0.7; }
+  100% { transform: translateY(-20px); opacity: 1; }
+}
+
+.calendar-section{
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: linear-gradient(to right top,#3f51b5,#7b1fa2);
+  border-radius: 20px;
+  color: white;
+  text-align: center;
+  box-shadow: 0 0 20px #9575cd;
+}
+
+.calendar-section h2{
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  text-shadow: 1px 1px 3px #000;
+}
+
+.calendar{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.month{
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.days{
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  width: 100%;
+}
+
+.day-name{
+  font-weight: bold;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.day, .day-name{
+  padding: 10px;
+  border-radius: 8px;
+  background-color:  rgba(255, 255, 255, 0.1);
+}
+
+.day:hover{
+  background-color:  rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+}
+
+.empty{
+  background-color: transparent;
+}
+.legend{
+  box-shadow: 0 0 20px #9575cd;
   display: inline-block;
-  margin-bottom: 50px;
-  border: solid white;
-  padding: 150px;
-  background: linear-gradient(to right top,
-   purple, rgb(187, 7, 142));
-   box-shadow: 0 0 30px rgb(245, 48, 245);
+  box-sizing: border-box;
+  padding: 15px;
+  height: 200px;
+  position: relative;
+  bottom: 500px;
+  background: linear-gradient(to right top,#3f51b5,#7b1fa2);
+  border-radius: 20px;
 }
-.vid > div h2{
+.legend h2{
   color: white;
-  text-shadow: 2px 2px 30px;
-  font-weight: bold;
   text-align: center;
 }
-.vid > div .video{
-  border: solid white;
-  box-shadow: 0 0 30px rgb(235, 44, 235);
-}
-.vid > div h2{
+.legend ul > li{
   color: white;
-  text-shadow: 2px 2px 30px;
-  font-weight: bold;
   text-align: center;
+}
+.legend ul > li::marker{
+  content: "💙";
 }

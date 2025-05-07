@@ -107,10 +107,10 @@ body{
   color: black;
 }
 #loginForm{
-  border: solid;
+  border: solid rgb(32, 237, 237);
   padding: 25px;
   border-radius: 20px;
-  background-color: wheat;
+  box-shadow: 2px 2px 5px;
 }
 form label{
   font-size: 1.2em;
