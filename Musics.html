@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music</title>
+  <link rel="stylesheet" href="css/main-page-design.css">
+  <link rel="stylesheet" href="css/music.css">
+</head>
+<body>
+  <header>
+    <h1 id="title">Welcome my Love💙</h1>
+    <hr>
+    <nav class="navbar">
+      <ul class="nav-list">
+        <li><a href="main-page.html">Home</a></li>
+        <li><a href="picture.html" title="Queene's beautiful pictures">Pictures</a></li>
+        <li><a href="video.html" title="Queene's beautiful videos">Video</a></li>
+        <li><a href="dates.html" title="incase you forgot the dates">Dates</a></li>
+        <li><a href="https://web.facebook.com/christiandale.dechavez.9" title="click me if you miss me" target="_blank">Miss me??</a></li>
+        <li><a href="musics.html">Musics</a></li>
+        <button onclick="logout()" id="logoutbtn">Logout</button>
+      </ul>
+    </nav>
+    <hr>
+  </header>
+  <main>
+    <div>
+      <audio id="audioPlayer" src="music/love.mp3" preload="auto"></audio>
+      <div id="audioControls">
+        <div>
+          <h2>Wave to Earth</h2>
+          <button id="playPauseBtn">Play</button>
+          <input type="range" id="progressBar" value="0" max="100" step="1" />
+          <button id="muteBtn">Mute</button>
+          <input type="range" id="volumeControl" value="100" max="100" step="1" />
+          <span id="currentTime">0:00</span> / <span id="duration">0:00</span>
+        </div>
+      </div>  
+    </div>
+  </main>
+  <script src="music.js"></script>
+</body>
+</html>

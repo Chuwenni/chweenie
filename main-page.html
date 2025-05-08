@@ -20,6 +20,7 @@
         <li><a href="video.html" title="Queene's beautiful videos">Video</a></li>
         <li><a href="dates.html" title="incase you forgot the dates">Dates</a></li>
         <li><a href="https://web.facebook.com/christiandale.dechavez.9" title="click me if you miss me" target="_blank">Miss me??</a></li>
+        <li><a href="musics.html">Musics</a></li>
         <button onclick="logout()" id="logoutbtn">Logout</button>
       </ul>
     </nav>
@@ -53,7 +54,7 @@
   
     <!-- Love Letter -->
     <section style="background-color: rgba(255, 255, 255, 0.1); padding: 1rem 2rem; border-radius: 15px; margin: 2rem auto; max-width: 600px;">
-      <h2 style="color: #fff; text-align: center;">A Letter to You</h2>
+      <h2 style="color: #fff; text-align: center;">A Letter For You My Love</h2>
       <p style="color: white; font-style: italic;">
         My love, <br>
         Every day with you is a blessing I never saw coming. <br>
@@ -63,13 +64,17 @@
     </section>
   
     <!-- Miss Me Button -->
-    <div style="text-align: center; margin-top: 2rem;">
-      <button onclick="alert('Aww, I miss you too! 💖')" style="padding: 10px 20px; background-color: #3f51b5; color: white; border: none; border-radius: 8px; font-size: 1rem; cursor: pointer;">
-        Miss me??
-      </button>
+    <div class="butn"  style="text-align: center; margin-top: 2rem;">
+      <div class="marked">Miss me???</div>
+    </div>
+    <div class="modal" id="myModal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p id="modalText">you clicked on day X</p>
+      </div>
     </div>
   </main>
-  
+  <script src="mainpage.js"></script> 
   <script>
     if (!sessionStorage.getItem('loggedIn')) {
       window.location.href = 'index.html';
@@ -80,7 +85,6 @@
       sessionStorage.removeItem('loggedIn');
       window.location.href = 'index.html';
     }
-
   </script>
 </body>
 </html>
