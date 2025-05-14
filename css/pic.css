@@ -1,0 +1,180 @@
+*{
+  padding:0;
+  margin: 0;
+}
+
+html {
+  background: linear-gradient(to bottom right, #3f51b5, #9c27b0); /* Blue-purple gradient */
+  overflow: auto;
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+}
+
+header {
+  background: linear-gradient(to right, #3f51b5, #7b1fa2); /* Blue to violet */
+  padding-bottom: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+header h1 {
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+  font-size: 2.5em;
+  text-align: center;
+  padding: 20px 10px;
+  animation: pulseTitle 2s infinite;
+}
+
+.navbar {
+  background-color: #1a237e; /* Dark blue */
+  width: 300px;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.navlist {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 10px;
+  
+}
+.label {
+  display: flex;
+  align-items: center;
+}
+
+.navlist li {
+  list-style-type: none;
+}
+
+.navlist label:hover {
+  background-color: #414edb;
+  text-decoration: underline white;
+  cursor: pointer;
+}
+
+.navlist a {
+  text-decoration: none;
+  color: white;
+}
+
+main {
+  background-color: rgba(63, 81, 181, 0.2); /* translucent blue */
+  min-height: 80vh;
+  padding: 2rem;
+  border-radius: 0 0 20px 20px;
+  text-align: center;
+  color: white;
+  font-size: 48px;
+  text-shadow: 2px 2px 5px  #5869d6;
+}
+
+.pictures{
+  display: grid;
+  width: 1700px;
+  /* border: solid; */
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 100px;
+  justify-items: center;
+  margin: 0 auto;
+}
+
+.pictures div {
+  height: 450px;
+  border: 2px solid white;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  padding: 0 50px 50px;
+}
+
+.pictures div h2{
+  font-size: 30px;
+  color: white;
+
+}
+
+
+#large-pic{
+  width: 1500px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;  
+  margin: 50px auto;
+  /* border: solid; */
+}
+
+#large-pic div{
+  border: 2px solid white;
+  padding: 30px;
+  text-align: center;
+  color: white;
+  font-size: 30px;
+}
+
+#large-pic .queene{
+  height: 370px
+}
+
+/* video area */
+
+
+@media (max-width: 576px) {
+  html{
+    font-size: 50%;
+  }
+
+  main {
+    padding: 0;
+  }
+  main h1 {
+    font-size: 30px;
+  }
+
+  .navbar {
+    width: 200px;
+  }
+
+  .pictures {
+    width: 390px;
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+  }
+
+  .pictures image {
+    height: 200px;
+  }
+  .pictures div h4{
+    font-size: 25px;
+  }
+  
+
+  #large-pic {
+    width: 390px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 100px;
+  }
+
+  #large-pic img {
+    height: 200px;
+  }
+
+  #large-pic .queene{
+    height: 170px;
+  }
+  .quenecool{
+    margin-bottom: 50px;
+  }
+}

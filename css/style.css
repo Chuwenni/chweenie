@@ -1,11 +1,11 @@
 html{
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 12pt;
+  font-size: 75%;
 }
 
 body{
-  overflow: hidden;
+  /* overflow: hidden; */
   background-color: cyan;
 }
 
@@ -20,6 +20,7 @@ body{
   padding: 0;
   overflow: hidden;
   margin: auto;
+  margin-top: 50px;
   background: linear-gradient(to right top,
   lightblue, rgb(40, 67, 221));
 }
@@ -31,6 +32,251 @@ body{
   justify-content: center;
   align-items: center;
   padding: 30px;
+}
+
+.left-pane h3{
+  color: white;
+  font-size: 2.5rem;
+  text-shadow: 1px 1px 2px black;
+}
+
+.right-pane {
+  flex: 1;
+  background: linear-gradient(to top left, #1400c6, #4bc3ff);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  border-radius: 20px;
+}  
+
+.right-content{
+  text-align: center;
+  max-width: 80%;
+}
+
+.right-content h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.right-content p {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+.left-pane, .right-pane {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+}
+
+.container > input{
+  margin-top: 5px;
+  font-size: 1.3em;
+  color: black;
+  font-weight: bold;
+  border: none;
+  box-shadow: 2px 2px 7px rgb(112, 255, 112);
+  background-color: white;
+}
+.container > button{
+  border: none;
+  font-size: 1.2em;
+  margin-top: 8px;
+  border-radius: 5px;
+  color: white;
+  background-color: black;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.container > button:hover{
+  background-color: white;
+  color: black;
+}
+
+#loginForm{
+  border: solid rgb(32, 237, 237);
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 2px 2px 5px;
+}
+.container label{
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: azure;
+  text-shadow: 1px 1px 2px black;
+}
+
+@media (max-width: 1500px) {
+    body{
+    overflow: auto;
+    background-color: cyan;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: row; /* side-by-side layout */
+    border: solid;
+    box-sizing: border-box;
+    height: 97vh;
+    width: max(80%, 800px); /* wider for two panes */
+    border-radius: 20px;
+    padding: 0;
+    overflow: hidden;
+    margin: auto;
+    margin-top: 50px;
+    background: linear-gradient(to right top,
+    lightblue, rgb(40, 67, 221));
+  }
+
+  .left-pane {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+  }
+
+  .left-pane h3{
+    color: white;
+    font-size: 2.5rem;
+    text-shadow: 1px 1px 2px black;
+  }
+
+  .right-pane {
+    width: 900px;
+    flex: 1;
+    background: linear-gradient(to top left, #1400c6, #4bc3ff);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    border-radius: 20px;
+    margin: 0 auto;
+  }  
+
+  .right-content{
+    text-align: center;
+    max-width: 80%;
+  }
+
+  .right-content h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+
+  .right-content p {
+    font-size: 1.1em;
+    line-height: 1.6;
+  }
+  .left-pane, .right-pane {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+  }
+
+  .container{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container > input{
+    margin-top: 5px;
+    font-size: 1.3em;
+    color: black;
+    font-weight: bold;
+    border: none;
+    box-shadow: 2px 2px 7px rgb(112, 255, 112);
+    background-color: white;
+  }
+  .container > button{
+    border: none;
+    font-size: 1.2em;
+    margin-top: 8px;
+    border-radius: 5px;
+    color: white;
+    background-color: black;
+    transition: 0.3s ease;
+    cursor: pointer;
+  }
+
+  .container > button:hover{
+    background-color: white;
+    color: black;
+  }
+
+  #loginForm{
+    border: solid rgb(32, 237, 237);
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px;
+  }
+  .container label{
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: azure;
+    text-shadow: 1px 1px 2px black;
+ }
+}
+
+
+
+
+
+@media (max-width: 500px) {
+  .wrapper {
+    flex-direction: column;
+    width: 95%;
+  }
+
+  .right-pane {
+    border-radius: 20px;
+    width: 320px;
+  }
+  .wrapper {
+  display: flex;
+  flex-direction: row; /* side-by-side layout */
+  border: solid;
+  box-sizing: border-box;
+  height: 97vh;
+  width: max(380px); /* wider for two panes */
+  border-radius: 20px;
+  padding: 0;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-top: 50px;
+  background: linear-gradient(to right top,
+  lightblue, rgb(40, 67, 221));
+}
+
+.left-pane {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.left-pane h3{
+  color: white;
+  font-size: 2.5rem;
+  text-shadow: 1px 1px 2px black;
 }
 
 .right-pane {
@@ -68,9 +314,13 @@ body{
   padding: 30px;
 }
 
+.container{
+  display: flex;
+  flex-direction: column;
+}
+
 .container > input{
   margin-top: 5px;
-  display: flex;
   font-size: 1.3em;
   color: black;
   font-weight: bold;
@@ -81,8 +331,6 @@ body{
 .container > button{
   border: none;
   font-size: 1.2em;
-  padding-left: 90px;
-  padding-right: 90px;
   margin-top: 8px;
   border-radius: 5px;
   color: white;
@@ -95,36 +343,18 @@ body{
   background-color: white;
   color: black;
 }
-#link{
-  text-decoration: none;
-  color: hsl(0, 90%, 61%);;
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  margin-top: 600px;
-}
-#link:hover{
-  color: black;
-}
+
 #loginForm{
   border: solid rgb(32, 237, 237);
   padding: 25px;
   border-radius: 20px;
   box-shadow: 2px 2px 5px;
 }
-form label{
-  font-size: 1.2em;
+.container label{
+  font-size: 1.3rem;
   font-weight: bold;
   color: azure;
-  
+  text-shadow: 1px 1px 2px black;
 }
-@media (max-width: 768px) {
-  .wrapper {
-    flex-direction: column;
-    width: 95%;
-  }
 
-  .right-pane {
-    border-radius: 0 0 20px 20px;
-  }
 }
