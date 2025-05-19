@@ -272,122 +272,61 @@ body{
 
 
 @media (max-width: 500px) {
-  .wrapper {
-    flex-direction: column;
-    width: 95%;
+  .wrapper{
+    width: 270px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-56%, -50%);
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    background-color: #f3f3f3;
+  }
+  .login-container, .message-container{
+    width: 270px; 
+    
   }
 
-  .right-pane {
-    border-radius: 20px;
-    width: 320px;
+
+  
+  @keyframes message-close{
+    0%{
+
+    }
+    25%{
+    font-size: 5px;
+    }
+    33%{
+      width: 115.83px;
+      height: 115.83px;
+      margin: 50px 77.085px;
+      border-radius: 20%;
+      font-size:2.5px;
+    }
+    50%{
+      width: 57.861px;
+      height: 57.861px;
+      margin: 175px 106.0695px;
+      border-radius: 30%;
+      font-size: 1px;
+    }
+    53%{
+      width: 50.625px;
+      height: 50.625px;
+      margin: 162.2px 109.6875px;
+      border-radius: 40%;
+      font-size: 0.5px;
+      display: none;
+      transform: translateY(20px);
+    }
+    100%{
+      width: 38.57142861px;
+      height: 38.57142861px;
+      margin: 50px 130px;
+      border-radius: 50%;
+      font-size: 0.2px;
+      display: none;
+    }
   }
-  .wrapper {
-  display: flex;
-  flex-direction: row; /* side-by-side layout */
-  border: solid;
-  box-sizing: border-box;
-  height: 97vh;
-  width: max(380px); /* wider for two panes */
-  border-radius: 20px;
-  padding: 0;
-  overflow: hidden;
-  margin: 0 auto;
-  margin-top: 50px;
-  background: linear-gradient(to right top,
-  lightblue, rgb(40, 67, 221));
-}
-
-.left-pane {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 30px;
-}
-
-.left-pane h3{
-  color: white;
-  font-size: 2.5rem;
-  text-shadow: 1px 1px 2px black;
-}
-
-.right-pane {
-  flex: 1;
-  background: linear-gradient(to top left, #1400c6, #4bc3ff);
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 30px;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-}
-
-.right-content{
-  text-align: center;
-  max-width: 80%;
-}
-
-.right-content h2 {
-  font-size: 2em;
-  margin-bottom: 10px;
-}
-
-.right-content p {
-  font-size: 1.1em;
-  line-height: 1.6;
-}
-.left-pane, .right-pane {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 30px;
-}
-
-.container{
-  display: flex;
-  flex-direction: column;
-}
-
-.container > input{
-  margin-top: 5px;
-  font-size: 1.3em;
-  color: black;
-  font-weight: bold;
-  border: none;
-  box-shadow: 2px 2px 7px;
-  background-color: white;
-}
-.container > button{
-  border: none;
-  font-size: 1.2em;
-  margin-top: 8px;
-  border-radius: 5px;
-  color: white;
-  background-color: black;
-  transition: 0.3s ease;
-  cursor: pointer;
-}
-
-.container > button:hover{
-  background-color: white;
-  color: black;
-}
-
-#loginForm{
-  border: solid rgb(32, 237, 237);
-  padding: 25px;
-  border-radius: 20px;
-  box-shadow: 2px 2px 5px;
-}
-.container label{
-  font-size: 1.3rem;
-  font-weight: bold;
-  color: azure;
-  text-shadow: 1px 1px 2px black;
-}
-
+ 
 }
