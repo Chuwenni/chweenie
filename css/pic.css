@@ -190,8 +190,13 @@ main {
   height: 370px
 }
 
-/* video area */
+.glass{
+  width: 750px;
+}
 
+.glass img{
+  width: 250px;
+}
 
 @media (max-width: 576px) {
   html{
