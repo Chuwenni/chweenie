@@ -36,6 +36,8 @@ header h1 {
   width: 350px;
   padding: 10px;
   margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
 }
 
 .navlist {
@@ -48,6 +50,11 @@ header h1 {
 .label {
   display: flex;
   align-items: center;
+}
+
+.labelVidRefresh{
+  display: flex;
+  justify-content: center;
 }
 
 .navlist li {
@@ -63,6 +70,55 @@ header h1 {
 .navlist a {
   text-decoration: none;
   color: white;
+}
+
+.moreList{
+  display: inline-block;
+}
+
+.more{
+  background-color: #1a237e;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: -0px;
+}
+
+.more:hover, .more:active{
+  background-color: #5869d6;
+}
+
+.dropdownVid{
+  width: 130px;
+  height: 80px;
+  background-color: #1a237e;
+  position: absolute;
+  top: 25px;
+  display: flex;
+  align-items: center;
+  display: none;
+  z-index: 999;
+}
+
+.dropdownVid.active{
+  display: flex;
+}
+
+.dropdownVid input{
+  display: none;
+}
+
+.dropdownVid p {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.labeldropDown{
+  display: flex;
+}
+
+.labeldropDown:hover{
+  background-color: #5869d6;
 }
 
 main {
@@ -96,6 +152,9 @@ main {
   border: 2px solid white;
 }
 
+#largeviddiv video{
+  width: 400px;
+}
 
 @media (max-width: 576px) {
 
@@ -111,11 +170,11 @@ main {
   main h1 {
     font-size: 20px;
     text-align: center;
-    margin-left: 50px;
+    margin: o auto  ;
   }
 
   main {
-    max-width: 250px;
+    max-width: 300px;
     padding: 0;
     margin: 0 auto;
   }
@@ -136,8 +195,7 @@ main {
     height: 2000px;
     display:flex;
     flex-direction: column;
-    margin-left: 50px;
-    margin-right: 104px;
+    margin: 0 auto;
   }
   
   .vid div {
@@ -173,5 +231,7 @@ main {
     display: flex;
     flex-direction: column;
   }
-  
+  #largeviddiv{
+    width: 400px;
+  }
 }

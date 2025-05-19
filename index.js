@@ -13,3 +13,9 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
   }
 });
 
+const message = document.getElementById('message')
+const btn = document.getElementById('loginbtn')
+
+btn.addEventListener('click', () => {
+  message.classList.add('active')
+})

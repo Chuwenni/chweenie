@@ -52,8 +52,7 @@ main {
   list-style-type: none;
   margin: 0;
   padding: 10px;
-  display: flex;
-  align-items: center;
+  display: inline-block;
 }
 
 .nav-list li {
@@ -76,6 +75,7 @@ main {
   background-color: #3949ab;
   gap: 5px;
   position: absolute;
+  top: 33px;
   display: none;
   z-index: 1000;
 }  
@@ -86,6 +86,10 @@ main {
   font-size: 16px;
   font-weight: bold;
 }
+.dropdown .labelbtn button:hover, .dropdown .labelbtn button:active{
+  background-color: #5869d6;
+  cursor: pointer;
+}
 .dropdown .labelbtn:hover, .dropdown .labelbtn:active{
   background-color: #5869d6;
   cursor: pointer;
@@ -94,12 +98,7 @@ main {
   background-color: #5869d6;
   cursor: pointer;
 }
-.nav-list{
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 10px;
-}
+
 .nav-list > button{
   border: none;
   padding: 0 50px 0 5px;
@@ -108,6 +107,10 @@ main {
 }
 .nav-list:hover .dropdown{
   display: flex;
+}
+
+#menu-dropdown{
+  font-size: 1.2rem;
 }
 
 .label {
@@ -312,6 +315,7 @@ body::after {
    background-color: #3949ab;
    gap: 5px;
    position: absolute;
+   top: 26px;
    display: none;
    z-index: 1000;
   }  
