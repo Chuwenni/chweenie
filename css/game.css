@@ -1,96 +1,83 @@
-*{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-body{
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #f3f3f3;
+  color: white;
 }
 
 .wrapper{
-  display: flex;
-  gap: 50px
-}
-
-.firstgameContainer{
-  width: 400px;
-  height: 500px;
-  background-color: lightblue;
-  border-radius: 30px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.game{
+  width: 500px;
+  height: 900px;
   display: flex;
   flex-direction: column;
+  background: blue;
+  text-align: center;
+  overflow: hidden;
+  font-size: 20px;
+  border-radius: 30px;
+}
+
+#display{
+  width: 100%;
+  padding: 25px;
+  text-align: left;
+  font-size: 40px;
+  border: none;
+  background-color: hsl(212, 83%, 55%);
+  color: white;
+  outline: none;
+  margin: 10px 0;
+}
+
+#result{
+  font-size: 35px;
+  position: absolute;
+  left: 37%;
+  top: 10%;
+  text-align: center;
+  font-weight: bold;
+}
+
+.buttons{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 10px;
+  row-gap: 10px;
+  justify-items: center;
+  margin: 10px 0;
+}
+
+.btns{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: none;
+  background-color: hsl(195, 74%, 52%);
+  cursor: pointer;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.btns:hover{
+  background-color: hsl(195, 74%, 62%);
+}
+
+.btns:active{
+  background-color: hsl(195, 74%, 72%);
+}
+
+.kiss-container{
+  display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  flex-direction: column;
+  height: 100%;
 }
 
-.game h1{
-  font-size: 30px;
-  font-weight: bolder;
-  text-shadow: 1px 1px 2px black;
-  color: white;
-}
-
-.game p{
-  font-size: 13px;
-  color: white;
-  text-transform: uppercase;
-}
-
-.game h4{
-  font-size: 20px;
-  font-weight: 200;
-  color: white;
-}
-
-.game button{
-  font-size: 16px;
-  padding: 5px 20px;
-  border: none;
-  border-radius: 20px;
-  background-color: hsl(0, 4%, 48%);
-  text-transform: uppercase;
-}
-
-.game input{
-  border: none;
-  outline: none;
-  font-size: 19px;
-}
-
-.kissCount{
-  width: 200px;
-  height: 200px;
-  background-color: lightblue;
-  text-align: center;
+.container{
   display: flex;
-  align-items: center;
-  border-radius: 20px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
-}
-
-
-@media (max-width: 575px) {
-
-  body{
-    text-align: center;
-  }
-
-  .wrapper{
-    display: flex;
-    gap: 50px;
-    width: 300px;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 auto;
-  }
+  justify-content: center;
 }
