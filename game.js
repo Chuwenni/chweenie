@@ -18,7 +18,7 @@ function Enter(input){
 
   if (display.value == '') {
     result.textContent = 'Pls put a number'
-    result.style.color = 'white'
+    result.style.color = 'black'
     result.style.left = '33%'
     kiss++;
     kissCount.textContent = `${kiss}`
@@ -114,7 +114,7 @@ function Enter(input){
   else{
     result.textContent = 'Pls Put 2 Digits Only';
     result.style.left = '30%';
-    result.style.color = 'white'
+    result.style.color = 'black'
   }
   if (kiss == 10){
     hidden.textContent = 'ang dami pero kulang pa😋😋'

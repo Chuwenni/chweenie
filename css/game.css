@@ -81,3 +81,17 @@ body {
   display: flex;
   justify-content: center;
 }
+
+@media (max-width: 576px) {
+  .wrapper{
+    width: 400;
+    height: 700px;
+    font-size: 10px;
+  }
+
+  #result{
+    color: black;
+    top: -2%;
+    margin-right: 130px;
+  }
+}

@@ -18,4 +18,5 @@ const btn = document.getElementById('loginbtn')
 
 btn.addEventListener('click', () => {
   message.classList.add('active')
+  btn.style.display = 'none';
 })
