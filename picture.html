@@ -49,7 +49,8 @@
   </header>
   <main>
     <h1>Pictures</h1>
-    <div class="pictures">
+    <a id="show-pic">Show Pictures</a>
+    <div class="pictures" class="active" id="picture-div" >
       <div>
         <h2>Queene</h2>
         <image src="pictures/Messenger_creation_0788073B-5B25-4473-A584-1FACFC44B5FE.jpeg" height="350px" class="image"></image>
@@ -295,7 +296,8 @@
         <image src="pictures/Messenger_creation_E3922E72-8FB2-4F48-8289-AEA5F163DCB6.jpeg" height="350px" class="image"></image>
       </div>
     </div>
-    <div id="large-pic">
+    <a href="#" id="show-large-pic">Show Large Pic</a>
+    <div id="large-pic" class="idk" class="active">
         <div class="imgdiv">
           <h2>
             Queene na <br> nag tatago
@@ -342,7 +344,7 @@
        
     </h1>
   </footer>
-  <script src="video.js"></script>
+  <script src="imageGallery.js"></script>
   <script>
     if (!sessionStorage.getItem('loggedIn')) {
       window.location.replace('index.html');

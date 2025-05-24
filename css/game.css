@@ -35,7 +35,7 @@ body {
 #result{
   font-size: 35px;
   position: absolute;
-  left: 37%;
+  left: 40%;
   top: 10%;
   text-align: center;
   font-weight: bold;
@@ -80,6 +80,21 @@ body {
 .container{
   display: flex;
   justify-content: center;
+  position: relative;
+}
+
+.container a{
+  width: 100px;
+  height: 30px;
+  color: black;
+  text-decoration: none;
+  background-color: lightblue ;
+  border-radius: 10px;
+  position: absolute;
+}
+
+#try-again{
+  display: none;
 }
 
 @media (max-width: 576px) {
@@ -93,5 +108,10 @@ body {
     color: black;
     top: -2%;
     margin-right: 130px;
+  }
+  .container a{
+    top: -40%;
+    text-align: center;
+    font-size: 14px;
   }
 }

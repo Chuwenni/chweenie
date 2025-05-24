@@ -38,7 +38,8 @@
     <h1>
       Videos
     </h1>
-      <div class="vid">
+      <a id="show-vid">Show Video</a>
+      <div class="vid" class="active" id="vid-container">
         <div>
           <h2>
             Queene na nasa crane
@@ -175,7 +176,7 @@
       </div>
   </main>
 
-  <script src="video.js"></script>
+  <script src="videoGallery.js"></script>
   <script>
     if (!sessionStorage.getItem('loggedIn')) {
       window.location.replace('index.html');
